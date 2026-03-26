@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار إلكترونيات القدرة</title>
+    <style>
+        :root {
+            --primary-color: #1a4a76;
+            --secondary-color: #e67e22;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+            --card-bg: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--primary-color);
+        }
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+        .question-block {
+            background-color: #f9fbfd;
+            border: 1px solid #e1e8ed;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+        .question-block:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border-color: var(--secondary-color);
+        }
+        .question-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 5px;
+            transition: background 0.2s;
+        }
+        .options label:hover {
+            background-color: #e9f2fa;
+        }
+        input[type="radio"] {
+            margin-left: 10px;
+            accent-color: var(--secondary-color);
+        }
+        .submit-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            width: 100%;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #d67118;
+        }
+        #result-container {
+            margin-top: 20px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 1.5em;
+            font-weight: bold;
+            display: none;
+        }
+        .pass { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .fail { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>اختبار تفاعلي: إلكترونيات القدرة والتقويم</h1>
+    <form id="quizForm">
+        
+        <!-- Question 1 -->
+        <div class="question-block">
+            <div class="question-title">1. ما هي حاملات الشحنة الأكثرية في المادة شبه الموصلة الموجبة (P-Type)؟ [2]</div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="0"> الإلكترونات</label>
+                <label><input type="radio" name="q1" value="1"> الفجوات</label>
+                <label><input type="radio" name="q1" value="0"> النيوترونات</label>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-block">
+            <div class="question-title">2. أي من المواد التالية تضاف للسليكون النقي لإنتاج مادة سالبة (N-Type)؟ [2]</div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="1"> ذرات خماسية التكافؤ (مثل الفسفور)</label>
+                <label><input type="radio" name="q2" value="0"> ذرات ثلاثية التكافؤ (مثل البورون)</label>
+                <label><input type="radio" name="q2" value="0"> ذرات ثنائية التكافؤ</label>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-block">
+            <div class="question-title">3. متى يتصرف ثنائي القدرة (Diode) كمفتاح مغلق (ON) ويسمح بمرور التيار؟ [2]</div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="0"> في حالة الانحياز العكسي (Reverse Bias)</label>
+                <label><input type="radio" name="q3" value="1"> في حالة الانحياز الأمامي (Forward Bias)</label>
+                <label><input type="radio" name="q3" value="0"> عند وصوله لمنطقة الانهيار</label>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-block">
+            <div class="question-title">4. ما هي الميزة الرئيسية لثنائي شوتكي (Schottky Diode)؟ [3]</div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="0"> يتحمل جهود عالية جداً (حتى 5000V)</label>
+                <label><input type="radio" name="q4" value="0"> يستخدم للترددات المنخفضة فقط</label>
+                <label><input type="radio" name="q4" value="1"> انخفاض الجهد الأمامي صغير جداً وكفاءته عالية</label>
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-block">
+            <div class="question-title">5. ما هو عدد الثنائيات المستخدمة في مقوم القنطرة أحادي الطور (Bridge Rectifier) الأكثر شيوعاً؟ [3]</div>
+            <div class="options">
+                <label><input type="radio" name="q5" value="0"> ثنائي واحد</label>
+                <label><input type="radio" name="q5" value="0"> ثنائيان</label>
+                <label><input type="radio" name="q5" value="1"> 4 ثنائيات</label>
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question-block">
+            <div class="question-title">6. في مقوم الموجة الكاملة (محول نقطة وسط)، ما هي قيمة أقصى جهد عكسي مسلط (PIV)؟ [3]</div>
+            <div class="options">
+                <label><input type="radio" name="q6" value="0"> Vm</label>
+                <label><input type="radio" name="q6" value="1"> 2Vm</label>
+                <label><input type="radio" name="q6" value="0"> Vm / 2</label>
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question-block">
+            <div class="question-title">7. ما هو الغرض من إضافة مكثف (C) على التوازي مع الحمل في دارات التقويم؟ [3]</div>
+            <div class="options">
+                <label><input type="radio" name="q7" value="1"> التنعيم وتقليل التموج (Ripple) ليصبح الخرج أقرب لتيار مستمر نقي</label>
+                <label><input type="radio" name="q7" value="0"> زيادة قيمة التيار المتردد (AC)</label>
+                <label><input type="radio" name="q7" value="0"> حماية الثنائيات من الانهيار العكسي</label>
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question-block">
+            <div class="question-title">8. لماذا نلجأ لاستخدام التقويم ثلاثي الأطوار في التطبيقات الصناعية العالية (أكبر من 15 kW)؟ [4]</div>
+            <div class="options">
+                <label><input type="radio" name="q8" value="0"> لأنه أرخص من التقويم أحادي الطور</label>
+                <label><input type="radio" name="q8" value="1"> لإنتاج تيار مستمر شبه صافٍ بتموج شبه معدوم دون الحاجة لمكثفات ضخمة</label>
+                <label><input type="radio" name="q8" value="0"> لأنه يستخدم عدد ثنائيات أقل</label>
+            </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question-block">
+            <div class="question-title">9. كم عدد الثنائيات المستخدمة في مقوم قنطرة ثلاثي الأطوار ليعطي قمة الكفاءة؟ [4]</div>
+            <div class="options">
+                <label><input type="radio" name="q9" value="0"> 3 ثنائيات</label>
+                <label><input type="radio" name="q9" value="0"> 4 ثنائيات</label>
+                <label><input type="radio" name="q9" value="1"> 6 ثنائيات</label>
+            </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question-block">
+            <div class="question-title">10. عند فحص الثنائي بجهاز القياس الرقمي (DMM) في حالة الانحياز العكسي، ما هي القراءة المتوقعة للحالة السليمة؟ [4]</div>
+            <div class="options">
+                <label><input type="radio" name="q10" value="0"> قراءة منخفضة (مثل 0.7V)</label>
+                <label><input type="radio" name="q10" value="1"> قراءة الدائرة المفتوحة (OL)</label>
+                <label><input type="radio" name="q10" value="0"> قراءة صفرية</label>
+            </div>
+        </div>
+
+        <button type="button" class="submit-btn" onclick="calculateScore()">اعتماد الإجابات وإظهار النتيجة</button>
+    </form>
+
+    <div id="result-container"></div>
+</div>
+
+<script>
+    function calculateScore() {
+        let score = 0;
+        let totalQuestions = 10;
+        let form = document.getElementById('quizForm');
+        let isAllAnswered = true;
+
+        for (let i = 1; i <= totalQuestions; i++) {
+            let selected = form.querySelector('input[name="q' + i + '"]:checked');
+            if (selected) {
+                score += parseInt(selected.value);
+            } else {
+                isAllAnswered = false;
+            }
+        }
+
+        if (!isAllAnswered) {
+            alert("الرجاء الإجابة على جميع الأسئلة قبل عرض النتيجة.");
+            return;
+        }
+
+        let resultContainer = document.getElementById('result-container');
+        resultContainer.style.display = 'block';
+
+        if (score >= 5) {
+            resultContainer.className = 'pass';
+            resultContainer.innerHTML = '🎉 مبروك! نتيجتك هي: ' + score + ' من ' + totalQuestions;
+        } else {
+            resultContainer.className = 'fail';
+            resultContainer.innerHTML = '💡 تحتاج للمراجعة أكثر. نتيجتك هي: ' + score + ' من ' + totalQuestions;
+        }
+    }
+</script>
+
+</body>
+</html>
